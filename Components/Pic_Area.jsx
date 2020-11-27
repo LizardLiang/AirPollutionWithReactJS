@@ -220,6 +220,14 @@ class Pic_Area extends Component    {
     constructor(props){
         super(props)
         this.ImgList = []
+        this.BarList = [
+            'image/bar_red.png',
+            'image/bar_red.png',
+            'image/bar_orange.png',
+            'image/bar_wtf.png',
+            'image/bar_yellow.png',
+            'image/bar_green.png'
+        ]
     }
 
     setWindowEnable(){
@@ -239,6 +247,7 @@ class Pic_Area extends Component    {
             }
         }
         const WindowEnable = this.setWindowEnable()
+        const BarSrc       = this.BarList[this.props.BarIndex]
         return(
             <div style={Styles.divContainer}>
                 <Sunk       enabled={this.props.ItemList[0]}  
@@ -262,7 +271,7 @@ class Pic_Area extends Component    {
                             setIndexItem={this.props.setIndexItem}/>
                 <img id="table" class="r_table no_event" src="image/table.png" />
                 <img id="chair" class="r_chair no_event" src="image/chair.png" />
-                <img id="d_bar" class="r_bar" src="image/bar_red.png"/>
+                <img id="d_bar" class="r_bar" src={BarSrc}/>
             </div>
         )
     }

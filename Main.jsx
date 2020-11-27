@@ -158,7 +158,8 @@ class MainView extends Component {
         return(
             <div style={Styles.MainContainer}>
                 <Pic_Area   ItemList={this.props.data} 
-                            setIndexItem={this.changeItemStatus.bind(this)}/>
+                            setIndexItem={this.changeItemStatus.bind(this)}
+                            BarIndex={this.ItemCheck}/>
                 <Footer setPlay={this.setPlayStatus} isPlay={this.state.isPlaying} 
                         remainTime={this.ElapseTime} Score={this.ItemCheck}/>
                 <EndWindow  visible={this.EndWinVisible} text={this.EndWinText}/>
