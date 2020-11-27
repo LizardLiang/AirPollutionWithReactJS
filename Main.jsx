@@ -96,6 +96,8 @@ class MainView extends Component {
     TimeOutFunc(){
         this.EndWinText = 'Time Out'
         this.EndWinVisible = true
+        let emptyArray = [false,  false, false,  false, false,  false, false,  false]
+        this.props.setItemEnable(emptyArray)
         clearInterval(this.timer)
         this.setState({isPlaying: false})
     }
@@ -132,6 +134,8 @@ class MainView extends Component {
     setPlayStatus(){
         // Set Game Status
         if (this.state.isPlaying){
+            let emptyArray = [false,  false, false,  false, false,  false, false,  false]
+            this.props.setItemEnable(emptyArray)
             clearInterval(this.timer)
             this.setState({isPlaying: false})
         }
